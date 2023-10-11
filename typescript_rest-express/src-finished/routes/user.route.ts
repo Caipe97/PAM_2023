@@ -18,6 +18,7 @@ const UserRoute = (prisma: PrismaClient) => {
     })
     if(!user){
       res.status(400).send("No se encuentra usuario")
+      return
     }
     res.json(user)
   })
